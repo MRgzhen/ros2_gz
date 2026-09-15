@@ -1,0 +1,33 @@
+name: $Ros_distro$ RHEL Binary Build
+on:
+  workflow_dispatch:
+    branches:
+      - $branch$
+  pull_request:
+    branches:
+      - $branch$
+  push:
+    branches:
+      - $branch$
+  schedule:
+    # Run every day to detect flakiness and broken dependencies
+    - cron: '03 1 * * *'
+
+
+jobs:
+  $ros_distro$_rhel_binary:
+    name: $Ros_distro$ RHEL binary build
+    runs-on: ubuntu-latest
+    env:
+      ROS_DISTRO: $ros_distro$
+    container: ghcr.io/ros-controls/ros:$ros_distro$-rhel
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          path: src/$NAME$
+      - run: |
+          rosdep update
+          rosdep install -iy --from-path src/$NAME$
+          source /opt/ros/${{ env.ROS_DISTRO }}/setup.bash
+          colcon build
+          colcon test

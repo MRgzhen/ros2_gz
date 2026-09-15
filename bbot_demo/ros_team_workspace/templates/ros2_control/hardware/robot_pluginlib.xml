@@ -1,0 +1,9 @@
+<library path="dummy_package_namespace">
+  <class name="dummy_package_namespace/DummyClassName"
+         type="dummy_package_namespace::DummyClassName"
+         base_class_type="hardware_interface::Dummy_Interface_TypeInterface">
+    <description>
+      ros2_control hardware interface.
+    </description>
+  </class>
+</library>

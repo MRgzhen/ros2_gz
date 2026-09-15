@@ -1,0 +1,7 @@
+pip
+sphinx==5.0
+sphinx-copybutton
+sphinx-multiversion
+sphinx-rtd-theme
+sphinx-tabs
+standard-imghdr
