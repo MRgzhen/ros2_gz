@@ -1,0 +1,23 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: robot_descriptions
+    relative_path: models/a3_ultra_t2d5/urdf/robot.urdf.xacro
+  srdf:
+    relative_path: config/a3_ultra.srdf
+  package_settings:
+    author_name: gz
+    author_email: gz@qq.com
+    generated_timestamp: 1789312379
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<robot name="a3_ultra" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="model.urdf" />
+  <xacro:include filename="a3_ultra.ros2_control.xacro" />
+</robot>
