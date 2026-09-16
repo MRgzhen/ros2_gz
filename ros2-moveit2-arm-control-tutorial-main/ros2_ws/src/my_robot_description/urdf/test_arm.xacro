@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-
-    <!-- base_link: box size 0.4 0.4 0.1 -->
+     <!-- base_link: box size 0.4 0.4 0.1 -->
     <link name="base_link">
         <visual>
             <geometry>
@@ -10,16 +9,7 @@
             <origin xyz="0 0 0.05" rpy="0 0 0"/>
             <material name="grey"/>
         </visual>
-        <collision>
-            <geometry>
-                <box size="0.4 0.4 0.1"/>
-            </geometry>
-            <origin xyz="0 0 0.05" rpy="0 0 0"/>        
-        </collision>
     </link>
-      <gazebo reference="base_link">
-      <material>Gazebo/Orange</material>
-    </gazebo>
 
     <!-- shoulder_link: cylinder length 0.5 radius 0.1 -->
     <link name="shoulder_link">
@@ -30,16 +20,7 @@
             <origin xyz="0 0 0.25" rpy="0 0 0"/>
             <material name="blue"/>
         </visual>
-        <collision>
-            <geometry>
-                <box size="0.2 0.2 0.5"/>
-            </geometry>
-            <origin xyz="0 0 0.25" rpy="0 0 0"/>     
-        </collision>
     </link>
-     <gazebo reference="shoulder_link">
-        <material>Gazebo/Black</material>
-    </gazebo>
 
     <!-- arm_link: cylinder length 0.6 radius 0.05 -->
     <link name="arm_link">
@@ -51,16 +32,7 @@
             <origin xyz="0 0 0.3" rpy="0 0 0"/>
             <material name="grey"/>
         </visual>
-        <collision>
-            <geometry>
-                <box size="0.1 0.1 0.6"/>
-            </geometry>
-            <origin xyz="0 0 0.3" rpy="0 0 0"/>
-        </collision>
     </link>
-      <gazebo reference="arm_link">
-      <material>Gazebo/Gray</material>
-    </gazebo>
 
     <!-- elbow_link: cylinder length 0.1 radius 0.05 -->
     <link name="elbow_link">
@@ -71,16 +43,7 @@
             <origin xyz="0 0 0.05" rpy="0 0 0"/>
             <material name="blue"/>
         </visual>
-        <collision>
-            <geometry>
-                <box size="0.1 0.1 0.1"/>
-            </geometry>
-            <origin xyz="0 0 0.05" rpy="0 0 0"/>
-        </collision>
     </link>
-       <gazebo reference="elbow_link">
-      <material>Gazebo/White</material>
-    </gazebo>
 
     <!-- forearm_link: cylinder length 0.5 radius 0.05 -->
     <link name="forearm_link">
@@ -92,16 +55,7 @@
             <origin xyz="0 0 0.25" rpy="0 0 0"/>
             <material name="grey"/>
         </visual>
-        <collision>
-            <geometry>
-                <box size="0.1 0.1 0.5"/>
-            </geometry>
-            <origin xyz="0 0 0.25" rpy="0 0 0"/> 
-        </collision>
     </link>
-      <gazebo reference="forearm_link">
-      <material>Gazebo/Blue</material>
-    </gazebo>
 
     <!-- wrist_link: box size 0.1 0.1 0.05 -->
     <link name="wrist_link">
@@ -112,16 +66,7 @@
             <origin xyz="0 0 0.025" rpy="0 0 0"/>
             <material name="blue"/>
         </visual>
-        <collision>
-            <geometry>
-                <box size="0.1 0.1 0.05"/>
-            </geometry>
-            <origin xyz="0 0 0.025" rpy="0 0 0"/>
-        </collision>
     </link>
-    <gazebo reference="wrist_link">
-      <material>Gazebo/Black</material>
-    </gazebo>
 
     <!-- hand_link: box size 0.1 0.1 0.02 -->
     <link name="hand_link">
@@ -132,16 +77,7 @@
             <origin xyz="0 0 0.01" rpy="0 0 0"/>
             <material name="grey"/>
         </visual>
-        <collision>
-            <geometry>
-                <box size="0.1 0.1 0.02"/>
-            </geometry>
-            <origin xyz="0 0 0.01" rpy="0 0 0"/>
-        </collision>
     </link>
-    <gazebo reference="hand_link">
-      <material>Gazebo/White</material>
-    </gazebo>
 
     <!-- tool_link: no visual -->
     <link name="tool_link"/>
@@ -205,5 +141,4 @@
         <child link="tool_link"/>
         <origin xyz="0 0 0.02" rpy="0 0 0"/>
     </joint>
-
 </robot>
